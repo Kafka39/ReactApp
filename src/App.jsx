@@ -1,6 +1,12 @@
+import { useState } from 'react'
 import './App.css'
 
 function App(){
+  const [date, setDate] = useState(new Date().toLocaleTimeString())
+
+  setInterval(() => {
+    setDate(new Date().toLocaleTimeString())
+  }, 1000)
 
   function tangetUp(event) {
     const {value} = event.target.elements.inputValue
@@ -31,6 +37,10 @@ function App(){
             Получить данные
           </button>
         </form>
+
+        <p>
+          {date}
+        </p>
       </div>
     </>
   )
