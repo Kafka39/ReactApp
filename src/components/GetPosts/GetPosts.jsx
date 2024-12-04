@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function GetPosts() {
   const [content, setContent] = useState("");
 
-  function tangetUp(event) {
+  function onSubmit(event) {
     const { value } = event.target.elements.inputValue;
 
     event.preventDefault();
@@ -23,7 +23,7 @@ export default function GetPosts() {
 
   return (
     <>
-      <form onSubmit={tangetUp}>
+      <form onSubmit={onSubmit}>
         <p>
           <input type="text" name="inputValue" placeholder="Введите ID" />
         </p>
