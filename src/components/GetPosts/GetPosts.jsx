@@ -1,7 +1,9 @@
 import { useState } from "react";
 
+import { Button } from "../Button/Button";
+
 export default function GetPosts() {
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState(" ");
 
   function onSubmit(event) {
     const { value } = event.target.elements.inputValue;
@@ -19,13 +21,23 @@ export default function GetPosts() {
       .then((json) => setContent(json));
   }
 
+  function toggleButtonClick(e) {
+    console.log(e);
+  }
   return (
     <>
       <form onSubmit={onSubmit}>
         <p>
           <input type="text" name="inputValue" placeholder="Введите ID" />
         </p>
-        <button type="submit">Получить данные</button>
+
+        <Button
+          buttonIsActive={content.title}
+          buttonCliked={toggleButtonClick}
+          type="submit"
+        >
+          Получить данные
+        </Button>
       </form>
 
       <div>

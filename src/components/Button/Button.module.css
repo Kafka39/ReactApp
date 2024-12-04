@@ -1,0 +1,9 @@
+.button {
+    background-color: #5865f2;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.active {
+    background-color: #3865f2;
+}
