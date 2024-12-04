@@ -19,8 +19,6 @@ export default function GetPosts() {
       .then((json) => setContent(json));
   }
 
-  console.log(content) 
-
   return (
     <>
       <form onSubmit={onSubmit}>
@@ -29,6 +27,11 @@ export default function GetPosts() {
         </p>
         <button type="submit">Получить данные</button>
       </form>
+
+      <div>
+        Контент:
+        <p>{content.title ? content.title : "Такого контенте нет"}</p>
+      </div>
     </>
   );
 }
