@@ -1,8 +1,49 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button {
+  background-color: #5865f2;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+.list_users {
+  background-color: #070709;
+
+  padding: 15px;
+  border-radius: 7px;
+
+
+  height: 1000px;
+}
+
+.li {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+
+  list-style: none;
+
+  margin-bottom: 5px;
+
+  &:hover {
+    color: #5865f2;
+  }
+}
+
 .input {
-  border: 3px solid #211834;
+
+  background-color: #070709;
   border-radius: 7px;
 
   padding: 8px;
 
-  margin-top: 20px;
+  margin-bottom: 20px;
+
+  border: 1px solid #1d1d21;
+  &:focus {
+    border: 1px solid #5865f2;
+  }
 }
